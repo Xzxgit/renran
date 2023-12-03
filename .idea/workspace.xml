@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cb2f1cf-9552-4100-98b0-432b5e3bd1ae" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/renranapi/renranapi/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/renranapi/renranapi/settings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/renranapi/renranapi/utils/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/renranapi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/renranapi/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/renranapi/settings/dev.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +26,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Yz6haAymUGWnyoXYIrcatwUS4V" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/xzx/Desktop/renran/renranapi",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
@@ -81,7 +87,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701516181069</updated>
-      <workItem from="1701516182598" duration="2118000" />
+      <workItem from="1701516182598" duration="2685000" />
+      <workItem from="1701520795836" duration="1275000" />
+      <workItem from="1701605532600" duration="54000" />
     </task>
     <servers />
   </component>
@@ -100,6 +108,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/renran$manage.coverage" NAME="manage 覆盖结果" MODIFIED="1701518668650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/renranapi" />
+    <SUITE FILE_PATH="coverage/renran$manage.coverage" NAME="manage 覆盖结果" MODIFIED="1701521469048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/renranapi" />
   </component>
 </project>

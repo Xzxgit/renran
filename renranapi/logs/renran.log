@@ -1,0 +1,22 @@
+INFO 2023-12-02 12:42:52,005 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:43:52,529 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-02 12:43:53,257 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:46:01,176 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-02 12:46:01,701 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:48:30,508 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/__init__.py changed, reloading.
+INFO 2023-12-02 12:48:30,903 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:49:15,871 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:51:09,940 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-02 12:51:14,001 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-02 12:51:14,048 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2023-12-02 12:51:14,087 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-02 12:51:14,088 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-02 12:51:14,090 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-03 12:43:49,136 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-03 12:44:13,290 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-03 12:44:13,307 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2023-12-03 12:44:13,385 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-03 12:44:13,387 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-03 12:44:13,387 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+WARNING 2023-12-03 12:44:13,404 log 224 Not Found: /favicon.ico
+WARNING 2023-12-03 12:44:13,405 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 1998
