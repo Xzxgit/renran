@@ -63,3 +63,116 @@ INFO 2023-12-04 10:40:50,074 basehttp 161 "GET /static/admin/fonts/Roboto-Light-
 INFO 2023-12-04 10:46:06,876 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
 INFO 2023-12-04 10:46:07,347 autoreload 636 Watching for file changes with StatReloader
 INFO 2023-12-04 10:54:05,680 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 14:04:33,352 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 14:06:46,628 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 14:26:26,378 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-12-04 14:27:40,780 exception 99 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2023-12-04 14:27:40,813 log 224 Bad Request: /users/authorizations/
+WARNING 2023-12-04 14:27:40,813 basehttp 161 "GET /users/authorizations/ HTTP/1.1" 400 70885
+WARNING 2023-12-04 14:28:20,876 log 224 Not Found: /users/authorizations/
+WARNING 2023-12-04 14:28:20,876 basehttp 161 "GET /users/authorizations/ HTTP/1.1" 404 2192
+WARNING 2023-12-04 14:28:30,091 log 224 Not Found: /users/
+WARNING 2023-12-04 14:28:30,092 basehttp 161 "GET /users/ HTTP/1.1" 404 2147
+WARNING 2023-12-04 14:29:06,975 log 224 Not Found: /users/authorizations/
+WARNING 2023-12-04 14:29:06,975 basehttp 161 "POST /users/authorizations/ HTTP/1.1" 404 2193
+WARNING 2023-12-04 14:29:23,029 log 224 Not Found: /users/
+WARNING 2023-12-04 14:29:23,031 basehttp 161 "POST /users/ HTTP/1.1" 404 2148
+ERROR 2023-12-04 14:29:28,914 log 224 Internal Server Error: /users/login
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to api.renran.com:8000/users/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2023-12-04 14:29:28,915 basehttp 161 "POST /users/login HTTP/1.1" 500 71756
+WARNING 2023-12-04 14:33:45,018 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:33:45,019 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+WARNING 2023-12-04 14:33:56,983 log 224 Not Found: /users/authorizations/
+WARNING 2023-12-04 14:33:56,983 basehttp 161 "POST /users/authorizations/ HTTP/1.1" 404 2193
+WARNING 2023-12-04 14:34:02,187 log 224 Not Found: /users/
+WARNING 2023-12-04 14:34:02,188 basehttp 161 "POST /users/ HTTP/1.1" 404 2148
+WARNING 2023-12-04 14:34:07,899 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:34:07,900 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+WARNING 2023-12-04 14:34:19,573 log 224 Method Not Allowed: /users/login/
+WARNING 2023-12-04 14:34:19,574 basehttp 161 "GET /users/login/ HTTP/1.1" 405 40
+WARNING 2023-12-04 14:34:25,002 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:34:25,002 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+INFO 2023-12-04 14:35:41,528 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 14:35:41,999 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-04 14:35:45,008 log 224 Not Found: /users/login
+WARNING 2023-12-04 14:35:45,009 basehttp 161 "POST /users/login HTTP/1.1" 404 2163
+WARNING 2023-12-04 14:36:23,052 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:36:23,053 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+WARNING 2023-12-04 14:36:25,116 log 224 Not Found: /users/login
+WARNING 2023-12-04 14:36:25,116 basehttp 161 "POST /users/login HTTP/1.1" 404 2163
+WARNING 2023-12-04 14:36:27,997 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:36:27,998 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+INFO 2023-12-04 14:39:29,196 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 14:39:31,044 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-12-04 14:39:39,435 exception 99 Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2023-12-04 14:39:39,488 log 224 Bad Request: /
+WARNING 2023-12-04 14:39:39,490 basehttp 161 "GET / HTTP/1.1" 400 71179
+ERROR 2023-12-04 14:39:39,664 exception 99 Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2023-12-04 14:39:39,704 log 224 Bad Request: /favicon.ico
+WARNING 2023-12-04 14:39:39,705 basehttp 161 "GET /favicon.ico HTTP/1.1" 400 71230
+ERROR 2023-12-04 14:39:54,010 exception 99 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2023-12-04 14:39:54,050 log 224 Bad Request: /
+WARNING 2023-12-04 14:39:54,051 basehttp 161 "GET / HTTP/1.1" 400 72283
+ERROR 2023-12-04 14:39:54,109 exception 99 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2023-12-04 14:39:54,134 log 224 Bad Request: /favicon.ico
+WARNING 2023-12-04 14:39:54,135 basehttp 161 "GET /favicon.ico HTTP/1.1" 400 72208
+WARNING 2023-12-04 14:40:15,792 log 224 Not Found: /
+WARNING 2023-12-04 14:40:15,793 basehttp 161 "GET / HTTP/1.1" 404 2058
+WARNING 2023-12-04 14:40:15,829 log 224 Not Found: /favicon.ico
+WARNING 2023-12-04 14:40:15,829 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2109
+WARNING 2023-12-04 14:40:22,514 log 224 Not Found: /users
+WARNING 2023-12-04 14:40:22,514 basehttp 161 "GET /users HTTP/1.1" 404 2091
+WARNING 2023-12-04 14:40:25,877 log 224 Not Found: /users/
+WARNING 2023-12-04 14:40:25,877 basehttp 161 "GET /users/ HTTP/1.1" 404 2147
+INFO 2023-12-04 14:41:02,485 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 14:41:03,560 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-04 14:41:09,657 log 224 Not Found: /users
+WARNING 2023-12-04 14:41:09,659 basehttp 161 "GET /users HTTP/1.1" 404 2091
+INFO 2023-12-04 14:41:16,174 basehttp 161 "GET /users/login HTTP/1.1" 301 0
+ERROR 2023-12-04 14:41:16,216 log 224 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-04 14:41:16,217 basehttp 161 "GET /users/login/ HTTP/1.1" 500 82748
+ERROR 2023-12-04 14:42:45,317 log 224 Internal Server Error: /users/login
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to api.renran.com:8000/users/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2023-12-04 14:42:45,318 basehttp 161 "POST /users/login HTTP/1.1" 500 71853
+INFO 2023-12-04 14:43:04,898 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 14:43:05,453 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-04 14:43:13,569 log 224 Not Found: /users/login
+WARNING 2023-12-04 14:43:13,569 basehttp 161 "POST /users/login HTTP/1.1" 404 2163
+WARNING 2023-12-04 14:43:17,574 log 224 Bad Request: /users/login/
+WARNING 2023-12-04 14:43:17,574 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+INFO 2023-12-04 14:47:02,048 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 14:47:02,549 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 15:13:43,442 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 15:13:45,241 autoreload 636 Watching for file changes with StatReloader

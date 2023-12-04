@@ -29,7 +29,7 @@
     <div class="forget-btn">
       <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
     </div>
-    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button">
+    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="loginhandler">
       <span id="sign-in-loading"></span>
       登录
     </button>
@@ -55,7 +55,69 @@
 
 <script>
     export default {
-        name: "Login"
+        name: "Login",
+        data(){
+          return {
+            username: "",
+            password: "",
+            remember_me: false, // 设置是否要记录登录状态
+          }
+        },
+        methods:{
+          // 登录
+          loginhander(){
+            this.$axios.post(this.$settings.Host+"/users/login/",
+              {
+                "username":this.username,
+                "password":this.password
+              }).then(response=>{
+                // 使用浏览器本地存储保存token
+                if (this.remember_me) {
+                  // 记住登录
+                  sessionStorage.removeItem("user_token");
+                  sessionStorage.removeItem("user_id");
+                  sessionStorage.removeItem("user_name");
+                  sessionStorage.removeItem("user_avatar");
+                  sessionStorage.removeItem("user_nickname");
+                  localStorage.user_token = response.data.token;
+                  localStorage.user_id = response.data.id;
+                  localStorage.user_name = response.data.username;
+                  localStorage.user_avatar = response.data.avatar;
+                  localStorage.user_nickname = response.data.nickname;
+                  // sessionStorage.clear();
+                  // localStorage.user_token = response.data.token;
+                } else {
+                  // 未记住登录
+                  localStorage.removeItem("user_token");
+                  localStorage.removeItem("user_id");
+                  localStorage.removeItem("user_name");
+                  localStorage.removeItem("user_avatar");
+                  localStorage.removeItem("user_nickname");
+                  sessionStorage.user_token = response.data.token;
+                  sessionStorage.user_id = response.data.id;
+                  sessionStorage.user_name = response.data.username;
+                  sessionStorage.user_avatar = response.data.avatar;
+                  sessionStorage.user_nickname = response.data.nickname;
+                  // localStorage.clear();
+                  // sessionStorage.user_token = response.data.token;
+                }
+                this.$confirm('登录成功, 欢迎回来！', '提示', {
+                    confirmButtonText: '返回首页',
+                    cancelButtonText: '返回上一页',
+                    type: 'success'
+                  }).then(() => {
+                    this.$router.push("/");
+                  }).catch(() => {
+                    this.$router.go(-1);
+                  });
+
+              }).catch(error=>{
+                this.$message.error("登录失败！账号或密码错误！");
+                this.username = "";
+                this.password = "";
+              })
+          }
+        },
     }
 </script>
 
@@ -476,7 +538,7 @@ input{
 	line-height: 20px
 }
 
-.sign .overseas .dropdown-menu li a::hover {
+.sign .overseas .dropdown-menu li a:hover {
 	color: #fff;
 	background-color: #f5f5f5
 }
