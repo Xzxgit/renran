@@ -20,3 +20,46 @@ INFO 2023-12-03 12:44:13,387 basehttp 161 "GET /static/admin/fonts/Roboto-Light-
 INFO 2023-12-03 12:44:13,387 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
 WARNING 2023-12-03 12:44:13,404 log 224 Not Found: /favicon.ico
 WARNING 2023-12-03 12:44:13,405 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 1998
+INFO 2023-12-04 10:27:42,741 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 10:28:40,416 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-12-04 10:28:42,853 exception 99 Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2023-12-04 10:28:42,913 log 224 Bad Request: /
+WARNING 2023-12-04 10:28:42,913 basehttp 161 "GET / HTTP/1.1" 400 70259
+ERROR 2023-12-04 10:28:43,265 exception 99 Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING 2023-12-04 10:28:43,309 log 224 Bad Request: /favicon.ico
+WARNING 2023-12-04 10:28:43,309 basehttp 161 "GET /favicon.ico HTTP/1.1" 400 70310
+INFO 2023-12-04 10:28:51,209 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-04 10:28:51,229 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2023-12-04 10:28:51,319 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-04 10:28:51,321 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2023-12-04 10:28:51,329 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+WARNING 2023-12-04 10:28:51,349 log 224 Not Found: /favicon.ico
+WARNING 2023-12-04 10:28:51,350 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 1998
+INFO 2023-12-04 10:31:41,316 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 10:31:41,856 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 10:33:36,919 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-04 10:33:36,930 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2023-12-04 10:33:37,029 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2023-12-04 10:33:37,040 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2023-12-04 10:33:37,050 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+WARNING 2023-12-04 10:33:37,066 log 224 Not Found: /favicon.ico
+WARNING 2023-12-04 10:33:37,072 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2002
+INFO 2023-12-04 10:35:06,555 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 10:38:03,066 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-04 10:40:48,238 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 10:40:49,919 basehttp 161 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Äºº\x00\x00\x00+\x00\x07\x06ºº\x03\x04\x03\x03ÿ\x01\x00\x01\x00\x003\x00+\x00)')
+ERROR 2023-12-04 10:40:49,919 basehttp 142 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2023-12-04 10:40:49,920 basehttp 161 code 400, message Bad request version ('\x03Ò\x96ldÊs\x19Lv')
+ERROR 2023-12-04 10:40:49,921 basehttp 142 You're accessing the development server over HTTPS, but it only supports HTTP.
+
+INFO 2023-12-04 10:40:49,942 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2023-12-04 10:40:49,959 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2023-12-04 10:40:50,043 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2023-12-04 10:40:50,044 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+WARNING 2023-12-04 10:40:50,072 log 224 Not Found: /favicon.ico
+WARNING 2023-12-04 10:40:50,074 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2003
+INFO 2023-12-04 10:40:50,074 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2023-12-04 10:46:06,876 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-04 10:46:07,347 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-04 10:54:05,680 autoreload 636 Watching for file changes with StatReloader

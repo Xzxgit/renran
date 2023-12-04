@@ -22,10 +22,10 @@ import "../static/css/iconfont.css";
 import "../static/css/iconfont.eot";
 
 // 初始化axios
-// import axios from "axios"
+import axios from "axios";
 // 允许ajax发送请求时附带cookie，设置为不允许
-// axios.defaults.withCredentials = false;
-// Vue.prototype.$axios = axios; // 把对象挂载vue中
+axios.defaults.withCredentials = false;
+Vue.prototype.$axios = axios; // 把对象挂载vue中
 
 /* eslint-disable no-new */
 new Vue({
