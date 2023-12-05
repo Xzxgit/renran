@@ -176,3 +176,107 @@ INFO 2023-12-04 14:47:02,048 autoreload 250 /home/xzx/Desktop/renran/renranapi/r
 INFO 2023-12-04 14:47:02,549 autoreload 636 Watching for file changes with StatReloader
 INFO 2023-12-04 15:13:43,442 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
 INFO 2023-12-04 15:13:45,241 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 02:18:41,495 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 02:18:56,676 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 02:19:26,902 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 03:07:46,158 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+WARNING 2023-12-05 03:07:46,235 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 03:07:46,235 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+WARNING 2023-12-05 03:17:16,548 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 03:17:16,549 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+WARNING 2023-12-05 03:20:52,676 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 03:20:52,678 basehttp 161 "POST /users/login/ HTTP/1.1" 400 79
+WARNING 2023-12-05 03:21:16,692 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 03:21:16,692 basehttp 161 "POST /users/login/?username=root&passwoed=123 HTTP/1.1" 400 79
+INFO 2023-12-05 03:21:41,010 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-05 03:21:52,871 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 03:21:52,872 basehttp 161 "POST /users/login/?username=root&passwoed=123 HTTP/1.1" 400 79
+INFO 2023-12-05 08:41:19,947 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-12-05 08:41:41,937 exception 99 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2023-12-05 08:41:41,984 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:41:41,985 basehttp 161 "POST /users/login/?username=root&password=123 HTTP/1.1" 400 71920
+INFO 2023-12-05 08:42:47,597 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2023-12-05 08:42:48,174 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-05 08:42:49,642 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:42:49,642 basehttp 161 "POST /users/login/?username=root&password=123 HTTP/1.1" 400 79
+WARNING 2023-12-05 08:44:05,775 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:44:05,776 basehttp 161 "POST /users/login/?username=root&password=root123456 HTTP/1.1" 400 79
+ERROR 2023-12-05 08:47:05,954 log 224 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework_jwt/views.py", line 60, in post
+    response_data = jwt_response_payload_handler(token, user, request)
+  File "/home/xzx/Desktop/renran/renranapi/renranapi/apps/users/utils.py", line 15, in jwt_response_payload_handler
+    'avatar': user.avatar.url,
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/db/models/fields/files.py", line 62, in url
+    self._require_file()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/db/models/fields/files.py", line 39, in _require_file
+    raise ValueError("The '%s' attribute has no file associated with it." % self.field.name)
+ValueError: The 'avatar' attribute has no file associated with it.
+ERROR 2023-12-05 08:47:05,957 basehttp 161 "POST /users/login/ HTTP/1.1" 500 107482
+INFO 2023-12-05 08:53:41,924 autoreload 636 Watching for file changes with StatReloader
+ERROR 2023-12-05 08:53:50,254 log 224 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework_jwt/views.py", line 60, in post
+    response_data = jwt_response_payload_handler(token, user, request)
+  File "/home/xzx/Desktop/renran/renranapi/renranapi/apps/users/utils.py", line 16, in jwt_response_payload_handler
+    'nickname': user.nickname,
+AttributeError: 'User' object has no attribute 'nickname'
+ERROR 2023-12-05 08:53:50,256 basehttp 161 "POST /users/login/ HTTP/1.1" 500 100113
+INFO 2023-12-05 08:55:16,460 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 08:55:19,873 basehttp 161 "POST /users/login/ HTTP/1.1" 200 210
+INFO 2023-12-05 08:56:19,683 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+WARNING 2023-12-05 08:56:19,688 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:56:19,688 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+WARNING 2023-12-05 08:56:26,088 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:56:26,089 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+WARNING 2023-12-05 08:56:32,416 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 08:56:32,417 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+WARNING 2023-12-05 09:13:25,966 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 09:13:25,967 basehttp 161 "POST /users/login/ HTTP/1.1" 400 89
+INFO 2023-12-05 09:15:28,758 basehttp 161 "POST /users/login/ HTTP/1.1" 200 210
+INFO 2023-12-05 09:22:29,288 basehttp 161 "POST /users/login/ HTTP/1.1" 200 210
+WARNING 2023-12-05 09:23:32,520 log 224 Bad Request: /users/login/
+WARNING 2023-12-05 09:23:32,520 basehttp 161 "POST /users/login/ HTTP/1.1" 400 68
+INFO 2023-12-05 09:26:07,111 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/utils.py changed, reloading.
+INFO 2023-12-05 09:26:07,937 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-05 09:27:28,466 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+WARNING 2023-12-05 09:39:58,510 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-05 09:39:58,515 basehttp 161 "GET /users/captcha/?ticket=t03EMD-ATQmUlEoRWlZ9Y0vJox3KjxyUPkOw7WM4AHHcWCxilJoIFKNoeNGQMsqrSppKdz_nCL8YWkGFvvRskvJsFVMXo6NxlvTqxkMDS-VKMGbwEPVaND2__GYDZXJJcVB&randstr=%40FFO HTTP/1.1" 400 48
+WARNING 2023-12-05 09:40:15,450 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-05 09:40:15,453 basehttp 161 "GET /users/captcha/?ticket=t03FWQfLTnnr3fYTDIwHjNHFKJ10YJxbVMqnsRGIHTGlXS9_G1ReFsgouyFYesY7QeNnTOCHuV2sX_b8z8KmLhZ3oKVpRIG0nObtVRxtXhx1POQffwsnp3EaHnIsHj3UIbA&randstr=%40iEc HTTP/1.1" 400 48
+WARNING 2023-12-05 09:40:31,176 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-05 09:40:31,177 basehttp 161 "GET /users/captcha/?ticket=t03Lt10PLwoYVqQdaw3vz4WOXRI7GgfmPRV_R7XQtWPVQAXaQJbb-GBPdHU93fKY0qnxDTCBjCsJHdsZmKHLCs2Zsz1hMo33jDrDsirPa-Wa_DnrVZFJHm69Msa_asVy6at&randstr=%40xuC HTTP/1.1" 400 48
+WARNING 2023-12-05 09:45:12,119 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-05 09:45:12,121 basehttp 161 "GET /users/captcha/?ticket=t0333ycH7nXFwVX-TQiB7vR4LSWJHCJESAY38Q-ENymNAQsMgLk7njYrRhNeEPTdgJR2Isr9vuyw7Sjz3V48A7m6gSfh_-9JPKeAkhnXWuHm29lGFP19xAItU0zpIIvvor4&randstr=%40QQr HTTP/1.1" 400 48

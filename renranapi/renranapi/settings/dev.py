@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-gpm0fv$_&(8e8i92^%%kd&e*he7ot71!fl-3e&)747ax1-xi00
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "api.renran.com",
+    "api.renran.com", "127.0.0.1"
 ]
 
 # Application definition
@@ -211,3 +211,14 @@ JWT_AUTH = {
 AUTH_USER_MODEL = 'users.User'
 
 APPEND_SLASH = False
+
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBackend',
+]
+
+# 腾讯防水墙配置
+TENCENT_CAPTCHA = {
+    "GATEWAY": "https://ssl.captcha.qq.com/ticket/verify",
+    "APPID": "2195141207",
+    "App_Secret_Key": "o9IDVKNg4UTIrI5XO4JvrvGRn",
+}

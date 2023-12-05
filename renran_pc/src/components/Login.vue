@@ -1,39 +1,38 @@
 <template>
     <div class="sign">
-    <div class="logo"><router-link to="/"><img src="/static/image/nav-logo.png" alt="Logo"></router-link></div>
+    <div class="logo"><a href="/"><img src="/static/image/nav-logo.png" alt="Logo"></a></div>
     <div class="main">
 
 
 <h4 class="title">
   <div class="normal-title">
-    <router-link class="active" to="/login">登录</router-link>
+    <router-link class="active" to="/user/login">登录</router-link>
     <b>·</b>
-    <router-link id="js-sign-up-btn" class="" to="/register">注册</router-link>
+    <a id="js-sign-up-btn" class="" href="/register">注册</a>
   </div>
 </h4>
 <div class="js-sign-in-container">
   <form id="new_session" action="" method="post">
       <div class="input-prepend restyle js-normal">
-        <input placeholder="手机号或邮箱" type="text" name="session[email_or_mobile_number]" id="session_email_or_mobile_number">
+        <input placeholder="登录账号或手机号或邮箱" type="text" v-model="username" id="session_email_or_mobile_number">
         <i class="iconfont ic-user"></i>
       </div>
-    <!-- 海外登录登录名输入框 -->
+      <!-- 海外登录登录名输入框 -->
 
-    <div class="input-prepend">
-      <input placeholder="密码" type="password" name="password" id="session_password">
-      <i class="iconfont ic-password"></i>
-    </div>
-    <div class="remember-btn">
-      <input type="checkbox" value="true" checked="checked" name="remember_me" id="session_remember_me"><span>记住我</span>
-    </div>
-    <div class="forget-btn">
-      <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
-    </div>
-    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="loginhandler">
-      <span id="sign-in-loading"></span>
-      登录
-    </button>
-</form>
+      <div class="input-prepend">
+        <input placeholder="密码" type="password" v-model="password" id="session_password">
+        <i class="iconfont ic-password"></i>
+      </div>
+      <div class="remember-btn">
+        <input type="checkbox" value="true" checked="checked" v-model="remember_me" id="session_remember_me"><span>记住我</span>
+      </div>
+      <div class="forget-btn">
+        <a class="" href="">登录遇到问题?</a>
+      </div>
+      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="show_captcha">
+        <span id="sign-in-loading"></span>登录
+      </button>
+  </form>
   <!-- 更多登录方式 -->
   <div class="more-sign">
     <h6>社交帐号登录</h6>
@@ -54,13 +53,14 @@
 </template>
 
 <script>
+    import "../../static/js/TCaptcha";
     export default {
         name: "Login",
         data(){
           return {
-            username: "",
-            password: "",
-            remember_me: false, // 设置是否要记录登录状态
+             username:"",
+             password:"",
+             remember_me: false,
           }
         },
         methods:{
@@ -71,37 +71,30 @@
                 "username":this.username,
                 "password":this.password
               }).then(response=>{
-                // 使用浏览器本地存储保存token
-                if (this.remember_me) {
-                  // 记住登录
-                  sessionStorage.removeItem("user_token");
-                  sessionStorage.removeItem("user_id");
-                  sessionStorage.removeItem("user_name");
-                  sessionStorage.removeItem("user_avatar");
-                  sessionStorage.removeItem("user_nickname");
-                  localStorage.user_token = response.data.token;
-                  localStorage.user_id = response.data.id;
-                  localStorage.user_name = response.data.username;
-                  localStorage.user_avatar = response.data.avatar;
-                  localStorage.user_nickname = response.data.nickname;
-                  // sessionStorage.clear();
-                  // localStorage.user_token = response.data.token;
-                } else {
-                  // 未记住登录
-                  localStorage.removeItem("user_token");
-                  localStorage.removeItem("user_id");
-                  localStorage.removeItem("user_name");
-                  localStorage.removeItem("user_avatar");
-                  localStorage.removeItem("user_nickname");
-                  sessionStorage.user_token = response.data.token;
-                  sessionStorage.user_id = response.data.id;
-                  sessionStorage.user_name = response.data.username;
-                  sessionStorage.user_avatar = response.data.avatar;
-                  sessionStorage.user_nickname = response.data.nickname;
-                  // localStorage.clear();
-                  // sessionStorage.user_token = response.data.token;
-                }
-                this.$confirm('登录成功, 欢迎回来！', '提示', {
+                  // 使用浏览器本地存储保存token
+                  if (this.remember_me) {
+                    // 记住登录
+                    sessionStorage.removeItem("user_token");
+                    sessionStorage.removeItem("user_id");
+                    sessionStorage.removeItem("user_name");
+                    // sessionStorage.removeItem("user_avatar");
+                    localStorage.user_token = response.data.token;
+                    localStorage.user_id = response.data.id;
+                    localStorage.user_name = response.data.username;
+                    // localStorage.user_avatar = response.data.avatar;
+                  } else {
+                    // 未记住登录
+                    localStorage.removeItem("user_token");
+                    localStorage.removeItem("user_id");
+                    localStorage.removeItem("user_name");
+                    // localStorage.removeItem("user_avatar");
+                    sessionStorage.user_token = response.data.token;
+                    sessionStorage.user_id = response.data.id;
+                    sessionStorage.user_name = response.data.username;
+                    // sessionStorage.user_avatar = response.data.avatar;
+                  }
+
+                  this.$confirm('登录成功, 欢迎回来！', '提示', {
                     confirmButtonText: '返回首页',
                     cancelButtonText: '返回上一页',
                     type: 'success'
@@ -112,10 +105,46 @@
                   });
 
               }).catch(error=>{
-                this.$message.error("登录失败！账号或密码错误！");
-                this.username = "";
-                this.password = "";
+                  this.$message.error("登录失败！账号或密码错误！");
+                  this.username = "";
+                  this.password = "";
               })
+          },
+          show_captcha(){
+
+            // 判断手机号或者密码是否为空！
+            if(this.username.length<1 || this.password.length<1){
+              return false; // 阻止代码继续往下执行
+            }
+
+            // 验证码
+            let self = this;
+            // 生成一个验证码对象
+            var captcha1 = new TencentCaptcha(this.$settings.TC_captcha.app_id, function(res) {
+              console.log(res);
+              // res（未通过验证）= {ret: 1, ticket: null}
+
+              // ticket	验证成功的票据，当且仅当ret=0时ticket有值
+              // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+              if (res.ret === 0) {
+                // 随机码
+                // api服务端校验验证码的结果
+                self.$axios.get(`${self.$settings.Host}/users/captcha/`,{
+                  params:{
+                    ticket: res.ticket,
+                    randstr: res.randstr,
+                  }
+                }).then(response=>{
+                  // 进行登录处理
+                  self.loginhander();
+                }).catch(error=>{
+                  self.$message.error("验证码校验错误！");
+                })
+              }
+            });
+
+            // 显示验证码
+            captcha1.show();
           }
         },
     }
