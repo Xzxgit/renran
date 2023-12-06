@@ -31,6 +31,7 @@
             <i class="iconfont ic-password"></i>
           </div>
           <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="show_captcha">
+<!--          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="registerhandler">-->
           <p class="sign-up-msg">点击 “注册” 即表示您同意并愿意遵守荏苒<br> <a target="_blank" href="">用户协议</a> 和 <a target="_blank" href="">隐私政策</a> 。</p>
         </form>
         <!-- 更多注册方式 -->
@@ -118,14 +119,15 @@
                 this.$axios.post(`${this.$settings.Host}/users/`,{
                     nickname: this.nickname,
                     mobile: this.mobile,
-                    sms_code: this.sms_code,
+                    sms_code: 666666,
                     password: this.password,
                 }).then(response=>{
                     // 注册成功，默认已经登录，所以我们这里临时保存登录状态
                     sessionStorage.user_token = response.data.token;
                     sessionStorage.user_id = response.data.id;
                     sessionStorage.user_name = response.data.username;
-                    sessionStorage.user_avatar = null;
+                    sessionStorage.user_avatar = response.data.avatar;
+                    sessionStorage.user_nickname = response.data.nickname;
                     localStorage.removeItem("user_token");
                     localStorage.removeItem("user_id");
                     localStorage.removeItem("user_name");

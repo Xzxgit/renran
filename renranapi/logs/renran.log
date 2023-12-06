@@ -340,3 +340,122 @@ INFO 2023-12-06 12:07:51,743 autoreload 636 Watching for file changes with StatR
 INFO 2023-12-06 16:12:52,925 autoreload 636 Watching for file changes with StatReloader
 INFO 2023-12-06 16:43:07,580 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
 INFO 2023-12-06 16:43:07,720 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 17:01:32,726 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2023-12-06 17:01:33,727 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-06 17:02:33,188 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2023-12-06 17:02:33,681 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-06 17:14:20,543 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2023-12-06 17:14:21,517 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-06 17:17:29,023 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 17:21:24,123 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+WARNING 2023-12-06 17:27:36,450 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-06 17:27:36,452 basehttp 161 "GET /users/captcha/?ticket=t03LcuMuZKpKiWkxtqcxsydNh4XGjYI6CLh5Nq9qvkStzfQcPbY0sPLplqewrbZ7TMdIpngQ6UzC1VZcIScr4usF8vbiUzXaiPMtXMDrWPTkrFBe84e6aAcQC6Rdns6qjP9&randstr=%40PfV HTTP/1.1" 400 48
+INFO 2023-12-06 17:27:53,063 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 17:28:06,037 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 17:29:31,806 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+WARNING 2023-12-06 17:30:36,019 log 224 Not Found: /
+WARNING 2023-12-06 17:30:36,023 basehttp 161 "GET / HTTP/1.1" 404 2058
+WARNING 2023-12-06 17:30:36,100 log 224 Not Found: /favicon.ico
+WARNING 2023-12-06 17:30:36,102 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2109
+ERROR 2023-12-06 17:30:44,241 log 224 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-06 17:30:44,243 basehttp 161 "GET /users/ HTTP/1.1" 500 83088
+INFO 2023-12-06 17:30:51,541 basehttp 161 "GET /users HTTP/1.1" 301 0
+ERROR 2023-12-06 17:30:51,572 log 224 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-06 17:30:51,573 basehttp 161 "GET /users/ HTTP/1.1" 500 83088
+INFO 2023-12-06 17:31:19,523 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/urls.py changed, reloading.
+INFO 2023-12-06 17:31:20,234 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-06 17:31:22,698 basehttp 161 "GET /users/add HTTP/1.1" 301 0
+ERROR 2023-12-06 17:31:22,739 log 224 Internal Server Error: /users/add/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-06 17:31:22,740 basehttp 161 "GET /users/add/ HTTP/1.1" 500 83132
+WARNING 2023-12-06 17:31:31,462 log 224 Not Found: /users/
+WARNING 2023-12-06 17:31:31,462 basehttp 161 "GET /users/ HTTP/1.1" 404 2465
+INFO 2023-12-06 17:31:39,186 basehttp 161 "GET /users/captcha HTTP/1.1" 301 0
+ERROR 2023-12-06 17:31:39,497 log 224 Internal Server Error: /users/captcha/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-06 17:31:39,498 basehttp 161 "GET /users/captcha/ HTTP/1.1" 500 83077
+WARNING 2023-12-06 17:31:45,758 log 224 Not Found: /users/
+WARNING 2023-12-06 17:31:45,759 basehttp 161 "GET /users/ HTTP/1.1" 404 2465
+ERROR 2023-12-06 17:31:52,097 log 224 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/rest_framework/renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "/home/xzx/anaconda3/envs/renran/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2023-12-06 17:31:52,098 basehttp 161 "GET /users/login/ HTTP/1.1" 500 83184
+INFO 2023-12-06 17:48:50,586 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/urls.py changed, reloading.
+INFO 2023-12-06 17:48:51,453 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-06 17:49:29,831 basehttp 161 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2023-12-06 17:49:29,848 log 224 Bad Request: /users/
+WARNING 2023-12-06 17:49:29,848 basehttp 161 "POST /users/ HTTP/1.1" 400 65
+WARNING 2023-12-06 17:49:48,384 log 224 Bad Request: /users/
+WARNING 2023-12-06 17:49:48,384 basehttp 161 "POST /users/ HTTP/1.1" 400 87
+WARNING 2023-12-06 17:50:08,943 log 224 Bad Request: /users/
+WARNING 2023-12-06 17:50:08,943 basehttp 161 "POST /users/ HTTP/1.1" 400 87
+WARNING 2023-12-06 18:03:18,036 log 224 Bad Request: /users/
+WARNING 2023-12-06 18:03:18,037 basehttp 161 "POST /users/ HTTP/1.1" 400 128
+WARNING 2023-12-06 18:05:06,019 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-06 18:05:06,019 basehttp 161 "GET /users/captcha/?ticket=t03TVzlasNq3YFDFXbcp3AuXTvBSJg87aDS3cjCiU8DLfhkH326YSpyxJpxNkXixJHyTDERd6s7Idhe1mOzPiWm2UF6_FoZLDrjWbxDqRopSoHN0n3Dzl4HBiUe2gbzFwhT&randstr=%40Zr4 HTTP/1.1" 400 48

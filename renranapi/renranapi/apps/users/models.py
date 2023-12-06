@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class User(AbstractUser):
     """用户模型类"""
+    nickname = models.CharField(max_length=20, null=True, verbose_name="用户昵称")
     mobile = models.CharField(max_length=15, null=True, unique=True, help_text="手机号码", verbose_name="手机号码")
     wxchat = models.CharField(max_length=100, null=True, unique=True, help_text="微信账号", verbose_name="微信账号")
     alipay = models.CharField(max_length=100, null=True, unique=True, help_text="支付宝账号", verbose_name="支付宝账号")
@@ -18,4 +19,4 @@ class User(AbstractUser):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.username
+        return self.nickname if self.nickname else self.username

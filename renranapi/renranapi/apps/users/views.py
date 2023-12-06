@@ -9,7 +9,7 @@ from rest_framework import status
 
 
 class CaptchaAPIView(APIView):
-    def get(self,request):
+    def get(self, request):
         """验证码的验证结果校验"""
         AppSecretKey = settings.TENCENT_CAPTCHA["App_Secret_Key"]
         appid = settings.TENCENT_CAPTCHA["APPID"]
@@ -38,3 +38,13 @@ class CaptchaAPIView(APIView):
                 return Response("验证失败！%s" % res["err_msg"], status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response("验证失败！", status=status.HTTP_400_BAD_REQUEST)
+
+
+from rest_framework.generics import CreateAPIView
+from .models import User
+from .serializers import UserModelSerializer
+
+
+class UserCreateAPIView(CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserModelSerializer
