@@ -280,3 +280,13 @@ WARNING 2023-12-05 09:40:31,176 log 224 Bad Request: /users/captcha/
 WARNING 2023-12-05 09:40:31,177 basehttp 161 "GET /users/captcha/?ticket=t03Lt10PLwoYVqQdaw3vz4WOXRI7GgfmPRV_R7XQtWPVQAXaQJbb-GBPdHU93fKY0qnxDTCBjCsJHdsZmKHLCs2Zsz1hMo33jDrDsirPa-Wa_DnrVZFJHm69Msa_asVy6at&randstr=%40xuC HTTP/1.1" 400 48
 WARNING 2023-12-05 09:45:12,119 log 224 Bad Request: /users/captcha/
 WARNING 2023-12-05 09:45:12,121 basehttp 161 "GET /users/captcha/?ticket=t0333ycH7nXFwVX-TQiB7vR4LSWJHCJESAY38Q-ENymNAQsMgLk7njYrRhNeEPTdgJR2Isr9vuyw7Sjz3V48A7m6gSfh_-9JPKeAkhnXWuHm29lGFP19xAItU0zpIIvvor4&randstr=%40QQr HTTP/1.1" 400 48
+INFO 2023-12-06 03:14:52,062 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-06 03:24:52,683 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-06 03:24:52,687 basehttp 161 "GET /users/captcha/?ticket=t03NgB36kaeDC3Zgw_neY7z68M5OiMXH6CcPRSMn86Xjl04mQsee4zq9brmb_VdCOwYLMnQbFnOYsR5yLBOxOkUFr_kN-ldsln1YChB_6gyBiMjzsUQgktsbgHuwlflq6vN&randstr=%40j52 HTTP/1.1" 400 48
+WARNING 2023-12-06 03:26:45,017 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-06 03:26:45,017 basehttp 161 "GET /users/captcha/?ticket=t03wQwND-WWnFOqb_YDuqo2FxJDopJr7eKwW0IyIYCtklDHXCSppz8crqBm6RZmXEpLfRRbEneTRortGR2ZnV6bKK6mc2eTptxzN_DgihwuDdTaYK4F05OccK6dD7Hf2jKl&randstr=%400lz HTTP/1.1" 400 48
+INFO 2023-12-06 03:31:12,386 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2023-12-06 03:31:12,520 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 03:31:22,325 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 03:31:32,267 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+INFO 2023-12-06 03:53:52,443 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222

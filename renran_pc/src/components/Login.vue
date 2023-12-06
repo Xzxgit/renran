@@ -29,7 +29,9 @@
       <div class="forget-btn">
         <a class="" href="">登录遇到问题?</a>
       </div>
-      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="show_captcha">
+<!--      验证码登录用这个-->
+<!--      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="TencentCaptcha">-->
+      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="loginhander">
         <span id="sign-in-loading"></span>登录
       </button>
   </form>
@@ -77,21 +79,21 @@
                     sessionStorage.removeItem("user_token");
                     sessionStorage.removeItem("user_id");
                     sessionStorage.removeItem("user_name");
-                    // sessionStorage.removeItem("user_avatar");
+                    sessionStorage.removeItem("user_avatar");
                     localStorage.user_token = response.data.token;
                     localStorage.user_id = response.data.id;
                     localStorage.user_name = response.data.username;
-                    // localStorage.user_avatar = response.data.avatar;
+                    localStorage.user_avatar = response.data.avatar;
                   } else {
                     // 未记住登录
                     localStorage.removeItem("user_token");
                     localStorage.removeItem("user_id");
                     localStorage.removeItem("user_name");
-                    // localStorage.removeItem("user_avatar");
+                    localStorage.removeItem("user_avatar");
                     sessionStorage.user_token = response.data.token;
                     sessionStorage.user_id = response.data.id;
                     sessionStorage.user_name = response.data.username;
-                    // sessionStorage.user_avatar = response.data.avatar;
+                    sessionStorage.user_avatar = response.data.avatar;
                   }
 
                   this.$confirm('登录成功, 欢迎回来！', '提示', {
@@ -110,42 +112,42 @@
                   this.password = "";
               })
           },
-          show_captcha(){
+          /*show_captcha(){*/
 
-            // 判断手机号或者密码是否为空！
-            if(this.username.length<1 || this.password.length<1){
-              return false; // 阻止代码继续往下执行
-            }
+          /*  // 判断手机号或者密码是否为空！*/
+          /*  if(this.username.length<1 || this.password.length<1){*/
+          /*    return false; // 阻止代码继续往下执行*/
+          /*  }*/
 
-            // 验证码
-            let self = this;
-            // 生成一个验证码对象
-            var captcha1 = new TencentCaptcha(this.$settings.TC_captcha.app_id, function(res) {
-              console.log(res);
-              // res（未通过验证）= {ret: 1, ticket: null}
+          /*  // 验证码*/
+          /*  let self = this;*/
+          /*  // 生成一个验证码对象*/
+          /*  var captcha1 = new TencentCaptcha(this.$settings.TC_captcha.app_id, function(res) {*/
+          /*    console.log(res);*/
+          /*    // res（未通过验证）= {ret: 1, ticket: null}*/
 
-              // ticket	验证成功的票据，当且仅当ret=0时ticket有值
-              // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
-              if (res.ret === 0) {
-                // 随机码
-                // api服务端校验验证码的结果
-                self.$axios.get(`${self.$settings.Host}/users/captcha/`,{
-                  params:{
-                    ticket: res.ticket,
-                    randstr: res.randstr,
-                  }
-                }).then(response=>{
-                  // 进行登录处理
-                  self.loginhander();
-                }).catch(error=>{
-                  self.$message.error("验证码校验错误！");
-                })
-              }
-            });
-
-            // 显示验证码
-            captcha1.show();
-          }
+          /*    // ticket	验证成功的票据，当且仅当ret=0时ticket有值*/
+          /*    // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}*/
+          /*    if (res.ret === 0) {*/
+          /*      // 随机码*/
+          /*      // api服务端校验验证码的结果*/
+          /*      self.$axios.get(`${self.$settings.Host}/users/captcha/`,{*/
+          /*        params:{*/
+          /*          ticket: res.ticket,*/
+          /*          randstr: res.randstr,*/
+          /*        }*/
+          //       }).then(response=>{
+          //         // 进行登录处理
+          //         self.loginhander();
+          //       }).catch(error=>{
+          //         self.$message.error("验证码校验错误！");
+          //       })
+          //     }
+          //   });
+          //
+          //   // 显示验证码
+          //   captcha1.show();
+          // }
         },
     }
 </script>
