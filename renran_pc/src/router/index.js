@@ -5,7 +5,7 @@ Vue.use(Router)
 
 import Home from "../components/Home"
 import Login from "../components/Login"
-
+import Register from "../components/Register"
 
 export default new Router({
   mode: "history",
@@ -19,5 +19,10 @@ export default new Router({
       name: "Login",
       component: Login,
     },
+    {
+      name:"Register",
+      path: "/register",
+      component:Register,
+    }
   ]
 })
