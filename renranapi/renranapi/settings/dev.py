@@ -222,3 +222,37 @@ TENCENT_CAPTCHA = {
     "APPID": "2195141207",
     "App_Secret_Key": "o9IDVKNg4UTIrI5XO4JvrvGRn",
 }
+
+# 设置redis缓存
+CACHES = {
+    # 默认缓存
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        # 项目上线时,需要调整这里的路径
+        "LOCATION": "redis://127.0.0.1:6379/0",
+
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    # 提供给xadmin或者admin的session存储
+    "session": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    # 提供存储短信验证码
+    "sms_code":{
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+# 设置xadmin用户登录时,登录信息session保存到redis
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "session"

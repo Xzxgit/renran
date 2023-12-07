@@ -5,12 +5,13 @@ import re
 
 class UserModelSerializer(serializers.ModelSerializer):
     """用户信息序列化器"""
-    sms_code = serializers.CharField(required=True, write_only=True, max_length=5, help_text="短信验证码")
+    # sms_code = serializers.CharField(required=True, write_only=True, max_length=5, help_text="短信验证码")
     token = serializers.CharField(read_only=True, help_text="jwt登录认证")
 
     class Meta:
         model = User
-        fields = ["id", "username", "mobile", "password", "nickname", "sms_code", "token"]
+        # fields = ["id", "username", "mobile", "password", "nickname", "sms_code", "token"]
+        fields = ["id", "username", "mobile", "password", "nickname", "token"]
         extra_kwargs = {
             "id": {"read_only": True, },
             "username": {"read_only": True, },
@@ -46,14 +47,21 @@ class UserModelSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """保存用户注册信息"""
-        mobile = validated_data.get("mobile")
-        nickname = validated_data.get("nickname")
-        password = validated_data.get("password")
+        # mobile = validated_data.get("mobile")
+        # nickname = validated_data.get("nickname")
+        # password = validated_data.get("password")
         try:
-            user = User.objects.create_user(mobile=mobile, nickname=nickname, password=password)
+            user = User.objects.create_user(
+                username=validated_data.get("mobile"),
+                mobile=validated_data.get("mobile"),
+                nickname=validated_data.get("nickname"),
+                # password=validated_data.get("password")
+            )
         except:
             raise serializers.ValidationError("用户信息注册失败！")
-
+        # 密码要加密
+        user.set_password(validated_data.get("password"))
+        user.save()
         # 返回jwt登录token
         from rest_framework_jwt.settings import api_settings
 

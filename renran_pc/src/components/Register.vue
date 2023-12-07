@@ -20,18 +20,18 @@
                 <input placeholder="手机号" type="tel" v-model="mobile" id="user_mobile_number">
               <i class="iconfont ic-phonenumber"></i>
             </div>
-          <div class="input-prepend restyle no-radius security-up-code js-security-number" v-if="is_show_sms_code">
-              <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">
-            <i class="iconfont ic-verify"></i>
-            <a tabindex="-1" class="btn-up-resend js-send-code-button disable" href="javascript:void(0);" id="send_code">{{sms_code_text}}</a>
-          </div>
+<!--          <div class="input-prepend restyle no-radius security-up-code js-security-number" v-if="is_show_sms_code">-->
+<!--              <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">-->
+<!--            <i class="iconfont ic-verify"></i>-->
+<!--            <a tabindex="-1" class="btn-up-resend js-send-code-button disable" href="javascript:void(0);" id="send_code">{{sms_code_text}}</a>-->
+<!--          </div>-->
           <input type="hidden" name="security_number" id="security_number">
           <div class="input-prepend">
             <input placeholder="设置密码" type="password" v-model="password" id="user_password">
             <i class="iconfont ic-password"></i>
           </div>
-          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="show_captcha">
-<!--          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="registerhandler">-->
+<!--          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="show_captcha">-->
+          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" @click.prevent="registerhandler">
           <p class="sign-up-msg">点击 “注册” 即表示您同意并愿意遵守荏苒<br> <a target="_blank" href="">用户协议</a> 和 <a target="_blank" href="">隐私政策</a> 。</p>
         </form>
         <!-- 更多注册方式 -->
@@ -56,82 +56,83 @@
           return {
             nickname:"",
             mobile:"",
-            sms_code:"",
+            // sms_code:"",
             password:"",
-            sms_code_text:"发送验证码",
-            is_show_sms_code:false, // 控制是否显示短信验证码输入框
+            // sms_code_text:"发送验证码",
+            // is_show_sms_code:false, // 控制是否显示短信验证码输入框
           }
         },
-        watch:{
-          mobile(){
-            if(/^1[3-9]\d{9}$/.test(this.mobile)){
-              this.is_show_sms_code = true;
-            }else{
-              this.is_show_sms_code = false;
-            }
-          }
-        },
+        // watch:{
+        //   mobile(){
+        //     if(/^1[3-9]\d{9}$/.test(this.mobile)){
+        //       this.is_show_sms_code = true;
+        //     }else{
+        //       this.is_show_sms_code = false;
+        //     }
+        //   }
+        // },
         methods:{
-            show_captcha(){
-                // 显示验证码
-
-                // 判断手机号或者密码是否为空！
-                if(this.mobile.length<1 || this.password.length<1){
-                    // 阻止代码继续往下执行
-                    this.$message.error("手机号码或密码不能为空！");
-                    return false;
-                }
-
-                if(this.nickname.length<1 || this.sms_code.length<1){
-                    // 阻止代码继续往下执行
-                    this.$message.error("昵称或短信验证码不能为空！");
-                    return false;
-                }
-
-                var captcha1 = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=>{
-                    // 用户操作验证码成功以后的回调函数，这个函数将会在对象创建以后，在页面那种进行监听用户的操作
-                    // res就是用户操作成功以后，验证码服务器返回的内容
-                    /**
-                   res:
-                    appid: "2086888489"  # 验证码的APPID
-                    randstr: "@G0V"      # 随机字符串，防止重复
-                    ret: 0               # 0表示用户操作成功，2表示用户主动关闭验证码窗口
-                    ticket: ""           # 验证通过以后的票据，提供给python后端，将来到验证码服务器中进行
-                    */
-                    this.$axios.get(`${this.$settings.Host}/users/captcha/`,{
-                        params:{
-                          ticket: res.ticket,
-                          randstr: res.randstr
-                        }
-                    }).then(response=>{
-                        if(response.data.detail){
-                            // 继续进行注册处理
-                            this.registerhandler();
-                        }
-                    }).catch(error=>{
-                        this.$message.error("对不起，验证码校验不通过！");
-                    });
-                });
-                captcha1.show(); // 显示验证码
-            },
+            // show_captcha(){
+            //     // 显示验证码
+            //
+            //     // 判断手机号或者密码是否为空！
+            //     if(this.mobile.length<1 || this.password.length<1){
+            //         // 阻止代码继续往下执行
+            //         this.$message.error("手机号码或密码不能为空！");
+            //         return false;
+            //     }
+            //
+            //     if(this.nickname.length<1 || this.sms_code.length<1){
+            //         // 阻止代码继续往下执行
+            //         this.$message.error("昵称或短信验证码不能为空！");
+            //         return false;
+            //     }
+            //
+            //     var captcha1 = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=>{
+            //         // 用户操作验证码成功以后的回调函数，这个函数将会在对象创建以后，在页面那种进行监听用户的操作
+            //         // res就是用户操作成功以后，验证码服务器返回的内容
+            //         /**
+            //        res:
+            //         appid: "2086888489"  # 验证码的APPID
+            //         randstr: "@G0V"      # 随机字符串，防止重复
+            //         ret: 0               # 0表示用户操作成功，2表示用户主动关闭验证码窗口
+            //         ticket: ""           # 验证通过以后的票据，提供给python后端，将来到验证码服务器中进行
+            //         */
+            //         this.$axios.get(`${this.$settings.Host}/users/captcha/`,{
+            //             params:{
+            //               ticket: res.ticket,
+            //               randstr: res.randstr
+            //             }
+            //         }).then(response=>{
+            //             if(response.data.detail){
+            //                 // 继续进行注册处理
+            //                 this.registerhandler();
+            //             }
+            //         }).catch(error=>{
+            //             this.$message.error("对不起，验证码校验不通过！");
+            //         });
+            //     });
+            //     captcha1.show(); // 显示验证码
+            // },
             registerhandler(){
                 // 注册处理
                 this.$axios.post(`${this.$settings.Host}/users/`,{
+                    username: this.mobile,
                     nickname: this.nickname,
                     mobile: this.mobile,
-                    sms_code: 666666,
+                    // sms_code: this.sms_code_text,
                     password: this.password,
                 }).then(response=>{
                     // 注册成功，默认已经登录，所以我们这里临时保存登录状态
                     sessionStorage.user_token = response.data.token;
                     sessionStorage.user_id = response.data.id;
                     sessionStorage.user_name = response.data.username;
-                    sessionStorage.user_avatar = response.data.avatar;
+                    // sessionStorage.user_avatar = response.data.avatar;
                     sessionStorage.user_nickname = response.data.nickname;
                     localStorage.removeItem("user_token");
                     localStorage.removeItem("user_id");
                     localStorage.removeItem("user_name");
-                    localStorage.removeItem("user_avatar");
+                    // localStorage.removeItem("user_avatar");
 
                     // 页面跳转
                     this.$confirm('是否跳转到个人中心', '注册成功', {

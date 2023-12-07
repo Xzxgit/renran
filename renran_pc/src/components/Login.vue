@@ -31,7 +31,7 @@
       </div>
 <!--      验证码登录用这个-->
 <!--      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="show_captcha">-->
-      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="loginhander">
+      <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click.prevent="loginhandler">
         <span id="sign-in-loading"></span>登录
       </button>
 <!--      <p class="go_login" >没有账号? <router-link to="/register">立即注册</router-link></p>-->
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-    import "../../static/js/TCaptcha";
+    // import "../../static/js/TCaptcha";
     export default {
         name: "Login",
         data(){
@@ -68,7 +68,7 @@
         },
         methods:{
           // 登录
-          loginhander(){
+          loginhandler(){
             this.$axios.post(this.$settings.Host+"/users/login/",
               {
                 "username":this.username,
@@ -80,21 +80,21 @@
                     sessionStorage.removeItem("user_token");
                     sessionStorage.removeItem("user_id");
                     sessionStorage.removeItem("user_name");
-                    sessionStorage.removeItem("user_avatar");
+                    // sessionStorage.removeItem("user_avatar");
                     localStorage.user_token = response.data.token;
                     localStorage.user_id = response.data.id;
                     localStorage.user_name = response.data.username;
-                    localStorage.user_avatar = response.data.avatar;
+                    // localStorage.user_avatar = response.data.avatar;
                   } else {
                     // 未记住登录
                     localStorage.removeItem("user_token");
                     localStorage.removeItem("user_id");
                     localStorage.removeItem("user_name");
-                    localStorage.removeItem("user_avatar");
+                    // localStorage.removeItem("user_avatar");
                     sessionStorage.user_token = response.data.token;
                     sessionStorage.user_id = response.data.id;
                     sessionStorage.user_name = response.data.username;
-                    sessionStorage.user_avatar = response.data.avatar;
+                    // sessionStorage.user_avatar = response.data.avatar;
                   }
 
                   this.$confirm('登录成功, 欢迎回来！', '提示', {
@@ -137,7 +137,7 @@
                   }
                 }).then(response=>{
                   // 进行登录处理
-                  self.loginhander();
+                  self.loginhandler();
                 }).catch(error=>{
                   self.$message.error("验证码校验错误！");
                 })

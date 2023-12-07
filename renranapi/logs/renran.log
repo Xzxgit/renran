@@ -459,3 +459,55 @@ WARNING 2023-12-06 18:03:18,036 log 224 Bad Request: /users/
 WARNING 2023-12-06 18:03:18,037 basehttp 161 "POST /users/ HTTP/1.1" 400 128
 WARNING 2023-12-06 18:05:06,019 log 224 Bad Request: /users/captcha/
 WARNING 2023-12-06 18:05:06,019 basehttp 161 "GET /users/captcha/?ticket=t03TVzlasNq3YFDFXbcp3AuXTvBSJg87aDS3cjCiU8DLfhkH326YSpyxJpxNkXixJHyTDERd6s7Idhe1mOzPiWm2UF6_FoZLDrjWbxDqRopSoHN0n3Dzl4HBiUe2gbzFwhT&randstr=%40Zr4 HTTP/1.1" 400 48
+WARNING 2023-12-06 18:11:01,005 log 224 Bad Request: /users/captcha/
+WARNING 2023-12-06 18:11:01,006 basehttp 161 "GET /users/captcha/?ticket=t03uZO0eyjYlaS6n54TDroDBnbHFPglR_EyQOxwOvQUhgpHmVYTV1I7TAblBfkl3JdBXtZluiQrhQJvAI2g5JVJv-8wsbs-i0_I6cpmExNZ9O1-MdOBaDxwIEDxS4tYwDF0&randstr=%40lJ5 HTTP/1.1" 400 48
+WARNING 2023-12-06 18:11:43,413 log 224 Bad Request: /users/
+WARNING 2023-12-06 18:11:43,414 basehttp 161 "POST /users/ HTTP/1.1" 400 128
+WARNING 2023-12-06 18:16:43,870 log 224 Bad Request: /users/
+INFO 2023-12-07 09:33:37,265 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 09:34:13,491 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 09:39:01,774 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2023-12-07 09:39:02,697 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 09:43:16,020 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 09:43:44,819 basehttp 161 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2023-12-07 09:43:44,864 log 224 Bad Request: /users/
+INFO 2023-12-07 09:46:44,825 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2023-12-07 09:46:44,898 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+WARNING 2023-12-07 09:46:54,608 log 224 Bad Request: /users/
+WARNING 2023-12-07 09:46:54,608 basehttp 161 "POST /users/ HTTP/1.1" 400 124
+WARNING 2023-12-07 10:07:53,452 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:10:55,347 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:10:55,348 basehttp 161 "POST /users/ HTTP/1.1" 400 124
+WARNING 2023-12-07 10:16:23,226 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:16:23,227 basehttp 161 "POST /users/ HTTP/1.1" 400 64
+INFO 2023-12-07 10:44:33,016 basehttp 161 "POST /users/login/ HTTP/1.1" 200 222
+WARNING 2023-12-07 10:52:44,915 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:52:44,916 basehttp 161 "POST /users/ HTTP/1.1" 400 145
+WARNING 2023-12-07 10:53:48,740 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:53:48,741 basehttp 161 "POST /users/ HTTP/1.1" 400 64
+WARNING 2023-12-07 10:54:35,970 log 224 Bad Request: /users/
+WARNING 2023-12-07 10:54:35,970 basehttp 161 "POST /users/ HTTP/1.1" 400 31
+INFO 2023-12-07 11:02:42,241 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 11:03:25,087 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/serializers.py changed, reloading.
+INFO 2023-12-07 11:03:25,925 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-07 11:03:34,745 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:03:34,745 basehttp 161 "POST /users/ HTTP/1.1" 400 31
+WARNING 2023-12-07 11:05:27,822 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:05:27,822 basehttp 161 "POST /users/ HTTP/1.1" 400 31
+INFO 2023-12-07 11:06:34,373 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/serializers.py changed, reloading.
+INFO 2023-12-07 11:06:35,216 autoreload 636 Watching for file changes with StatReloader
+INFO 2023-12-07 11:06:51,638 basehttp 161 "POST /users/ HTTP/1.1" 201 233
+WARNING 2023-12-07 11:14:46,737 log 224 Bad Request: /users/
+INFO 2023-12-07 11:18:01,761 autoreload 250 /home/xzx/Desktop/renran/renranapi/renranapi/apps/users/serializers.py changed, reloading.
+INFO 2023-12-07 11:18:03,192 autoreload 636 Watching for file changes with StatReloader
+WARNING 2023-12-07 11:18:16,735 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:18:16,736 basehttp 161 "POST /users/ HTTP/1.1" 400 64
+INFO 2023-12-07 11:18:25,721 basehttp 161 "POST /users/ HTTP/1.1" 201 234
+WARNING 2023-12-07 11:21:18,574 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:27:44,655 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:27:44,656 basehttp 161 "POST /users/ HTTP/1.1" 400 64
+WARNING 2023-12-07 11:27:54,193 log 224 Bad Request: /users/
+WARNING 2023-12-07 11:27:54,194 basehttp 161 "POST /users/ HTTP/1.1" 400 49
+INFO 2023-12-07 11:28:00,017 basehttp 161 "POST /users/ HTTP/1.1" 201 234
+INFO 2023-12-07 11:32:11,715 basehttp 161 "POST /users/ HTTP/1.1" 201 239
+INFO 2023-12-07 11:34:11,337 basehttp 161 "POST /users/login/ HTTP/1.1" 200 225
